@@ -1,9 +1,9 @@
 import React, { Component } from 'react';
-import logo from './logo.svg';
+import logo from '../logo.svg';
 import './App.css';
-import Sidebar from './sidebar/Sidebar';
-import Main from './main/Main';
-import store from './store';
+import Sidebar from '../components/sidebar/Sidebar';
+import Main from '../components/main/Main';
+import store from '../store';
 import _ from 'lodash';
 
 const App = () => {
