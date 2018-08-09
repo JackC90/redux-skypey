@@ -1,21 +1,20 @@
 import React, { Component } from 'react';
 import logo from './logo.svg';
 import './App.css';
+import Sidebar from './sidebar/Sidebar';
+import Main from './main/Main';
+import store from './store';
+import _ from 'lodash';
 
-class App extends Component {
-  render() {
-    return (
-      <div className="App">
-        <header className="App-header">
-          <img src={logo} className="App-logo" alt="logo" />
-          <h1 className="App-title">Welcome to React</h1>
-        </header>
-        <p className="App-intro">
-          To get started, edit <code>src/App.js</code> and save to reload.
-        </p>
-      </div>
-    );
-  }
+const App = () => {
+  const { contacts } = store.getState();
+
+  return (
+    <div className="App">
+      <Sidebar contacts={_.values(contacts)} />
+      <Main />
+    </div>
+  );
 }
 
 export default App;
