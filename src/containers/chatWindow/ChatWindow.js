@@ -1,5 +1,6 @@
 import React from "react";
 import store from "../../store";
+import "./ChatWindow.css";
 import _ from "lodash";
 import Chats from "../../components/chats/Chats";
 import Header from "../../components/header/Header";
